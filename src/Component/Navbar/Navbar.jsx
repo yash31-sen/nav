@@ -1,23 +1,25 @@
 import React, { useEffect } from 'react';
 import './Navbar.css';
-
+import Mainlogo from '../../../public/assets/mainlogo.png'
 export default function Navbar() {
     /*=============== SHOW MENU ===============*/
-    const showMenu = (toggleId, navId) => {
-        const toggle = document.getElementById(toggleId),
-              nav = document.getElementById(navId);
-        if (toggle && nav) {
-            toggle.addEventListener('click', () => {
-                // Add show-menu class to nav menu
-                nav.classList.toggle('show-menu');
-                // Add show-icon to show and hide the menu icon
-                toggle.classList.toggle('show-icon');
-            });
-        }
-    };
-
     useEffect(() => {
-        showMenu('nav-toggle', 'nav-menu');
+        const toggle = document.getElementById('nav-toggle');
+        const nav = document.getElementById('nav-menu');
+
+        if (toggle && nav) {
+            const handleToggleClick = () => {
+                nav.classList.toggle('show-menu');
+                toggle.classList.toggle('show-icon');
+            };
+
+            toggle.addEventListener('click', handleToggleClick);
+
+            // Clean up event listener on component unmount
+            return () => {
+                toggle.removeEventListener('click', handleToggleClick);
+            };
+        }
     }, []);
 
     return (
@@ -25,7 +27,7 @@ export default function Navbar() {
             <nav className="nav container">
                 <div className="nav__data">
                     <a href="#" className="nav__logo">
-                        <i className="ri-planet-line"></i> Company
+                        <img className='Mainlogo' src={Mainlogo} alt="GGITS" />
                     </a>
                     <div className="nav__toggle" id="nav-toggle">
                         <i className="ri-menu-line nav__burger"></i>

@@ -41,6 +41,7 @@
   margin: 0;
 }
 
+
 body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
@@ -77,6 +78,45 @@ a {
 /*=============== NAV ===============*/
 .nav {
   height: var(--header-height);
+}
+/* Default logo size */
+.Mainlogo {
+  width: 12vw;
+}
+
+/* Logo size for large devices */
+@media screen and (min-width: 1118px) {
+  .Mainlogo {
+    width: 10vw;
+  }
+}
+
+/* Logo size for medium devices */
+@media screen and (min-width: 760px) and (max-width: 1117px) {
+  .Mainlogo {
+    width: 15vw;
+  }
+}
+
+/* Logo size for small devices */
+@media screen and (max-width: 759px) {
+  .Mainlogo {
+    width: 20vw;
+  }
+}
+
+/* Logo size for extra small devices */
+@media screen and (max-width: 424px) {
+  .Mainlogo {
+    width: 25vw;
+  }
+}
+
+/* Logo size for the smallest devices */
+@media screen and (max-width: 340px) {
+  .Mainlogo {
+    width: 30vw;
+  }
 }
 
 .nav__logo, 
