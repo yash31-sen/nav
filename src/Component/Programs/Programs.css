@@ -1,0 +1,45 @@
+.programs {
+    width: 100%;
+    /* background-color: blue; */
+    
+    display: flex;
+    flex-direction: column;
+    margin-top: 10vh;
+    padding: 20px; /* Added padding for spacing */
+}
+.porgramsbtn{
+    margin-top: 15px;
+    display: block;
+    width: 30%;
+    align-self:self-end;
+}
+
+.programs-heading {
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.programs-container {
+    display: flex;
+    justify-content: center; /* Center aligns content horizontally */
+}
+
+.pro {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    justify-content: center; /* Center items horizontally within the flex container */
+    gap: 20px; /* Adjust spacing between RibbonBox components */
+    width: 100%; /* Full width within the container */
+    max-width: 1200px; /* Limit maximum width to avoid stretching too wide */
+}
+
+/* Adjust RibbonBox styles if needed */
+
+
+@media (max-width:768px){
+    .hide-mobile{
+        display: none;
+    }
+}
