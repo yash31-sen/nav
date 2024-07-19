@@ -62,6 +62,8 @@ a {
 .container {
   max-width: 1120px;
   margin-inline: 1.5rem;
+  z-index: 100;
+
 }
 
 /*=============== HEADER ===============*/
@@ -70,7 +72,8 @@ a {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: var(--black-color);
+  /* background-color: var(--black-color); */
+  background-color: transparent;
   box-shadow: 0 2px 16px hsla(220, 32%, 8%, .3);
   z-index: var(--z-fixed);
 }
@@ -192,7 +195,9 @@ a {
 
 .nav__link {
   color: var(--white-color);
-  background-color: var(--black-color);
+  /* background-color: var(--black-color);
+   */
+   background-color: transparent;
   font-weight: var(--font-semi-bold);
   padding: 1.25rem 1.5rem;
   display: flex;
