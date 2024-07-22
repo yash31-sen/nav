@@ -1,6 +1,6 @@
 .programs {
     width: 100%;
-    background: #f9f9f9;
+    /* background: #f9f9f9; */
     padding: 20px;
     border: 10px solid transparent;
     border-image: url('./assets/footerbg.jpg') 30 round;

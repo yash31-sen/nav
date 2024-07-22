@@ -25,7 +25,7 @@ import './Placement.css'
             <AppContainer>
                 <Wrapper>
                     <Text>With Great Outcomes.</Text>
-                    <Note>Our customers have gotten offers from awesome companies.</Note>
+                    <Note>Our Students have gotten offers from awesome companies.</Note>
                     <Marquee>
                         <MarqueeGroup>
                             {row1.map((el, index) => (

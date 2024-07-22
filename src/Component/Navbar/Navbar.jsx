@@ -23,7 +23,12 @@ export default function Navbar() {
     }, []);
 
     return (
-        <header className="header">
+        <>    
+        
+        <div className="upperHeader">
+            
+        </div>
+            <header className="header">
             <nav className="nav container">
                 <div className="nav__data">
                     <a href="#" className="nav__logo">
@@ -109,5 +114,7 @@ export default function Navbar() {
                 </div>
             </nav>
         </header>
+        </>
+
     );
 }
