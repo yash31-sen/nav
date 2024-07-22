@@ -1,25 +1,41 @@
 .programs {
     width: 100%;
-    /* background-color: blue; */
-    
+    background: #f9f9f9;
+    padding: 20px;
+    border: 10px solid transparent;
+    border-image: url('./assets/footerbg.jpg') 30 round;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 10vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 10vh;
-    padding: 20px; /* Added padding for spacing */
-    border: 5px;
-    border: 40px solid transparent;
-    border-image: url('./assets/footerbg.jpg') round ;
 }
-.porgramsbtn{
-    margin-top: 15px;
+
+.programs button {
+    margin-top: 20px;
+}
+
+.porgramsbtn {
     display: block;
     width: 30%;
-    align-self:self-end;
+    align-self: center;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.porgramsbtn:hover {
+    background-color: #0056b3;
 }
 
 .programs-heading {
-    color: rgb(0, 0, 0);
+    color: #333;
     font-size: 24px;
     text-align: center;
     margin-bottom: 20px;
@@ -27,23 +43,20 @@
 
 .programs-container {
     display: flex;
-    justify-content: center; /* Center aligns content horizontally */
+    justify-content: center;
 }
 
 .pro {
     display: flex;
-    flex-wrap: wrap; /* Allows items to wrap to the next line */
-    justify-content: center; /* Center items horizontally within the flex container */
-    gap: 20px; /* Adjust spacing between RibbonBox components */
-    width: 100%; /* Full width within the container */
-    max-width: 1200px; /* Limit maximum width to avoid stretching too wide */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
 }
 
-/* Adjust RibbonBox styles if needed */
-
-
-@media (max-width:768px){
-    .hide-mobile{
+@media (max-width: 768px) {
+    .hide-mobile {
         display: none;
     }
 }

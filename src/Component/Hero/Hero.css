@@ -1,111 +1,203 @@
 .hero {
-    position: relative;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+video {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.slider-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  display: inline-blo;
+  background-color: rgba(31, 26, 26, 0.717);
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.mySwiper {
+  height: auto;
+  /* Adjust height according to content */
+}
+
+.slide-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide-content h2 {
+  margin-bottom: 20px;
+}
+
+.slide-content table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.slide-content table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 5px;
+}
+
+.swiper-button-next {
+  right: -60px;
+  /* Adjust as needed */
+}
+
+.swiper-button-prev {
+  right: -130px;
+  /* Adjust as needed */
+}
+
+.h2-slide1,
+.h2-slides {
+  font-size: 2.6em;
+  font-weight: bolder;
+}
+
+.applynow-slide1 {
+  background: linear-gradient(to bottom, #ae8635, #f7ef8a, #d2ac47, #dec967);
+
+
+  color: black;
+  padding: 10px;
+  margin-top: 2vh;
+}
+
+.applynow-slide1:hover {
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  border: 2px solid red;
+}
+
+.fa-solid {
+  margin-left: 10px;
+}
+
+
+
+.contentSlideMain {
+  width: 100%;
+
+}
+
+.tablesSlide2 {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.resp {
+  display: flex;
+  width: 100%;
+}
+
+.resp1 {
+  display: flex;
+  width: 50%;
+}
+
+.tablesSlide3 {
+  /* width: 100%; */
+  height: auto;
+  display: flex;
+  /* flex-direction: column; */
+}
+
+.td2 {
+  /* display: flex; */
+}
+
+.td3 {
+  /* display: flex; */
+}
+
+.td1 {
+  width: 100%;
+  border: 2px solid white;
+  padding: 15px;
+}
+
+@media screen and (min-width:426px){
+  .tablesSlide3 {
     width: 100%;
-    height: 100vh;
-    overflow: hidden;
-  }
-  
-  video {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-  }
-  
-  .slider-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    background-color: rgba(31, 26, 26, 0.489);
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  
-  .mySwiper {
-    height: auto; /* Adjust height according to content */
-  }
-  
-  .slide-content {
+    height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
   }
   
-  .slide-content h2 {
-    margin-bottom: 20px;
+  .td2 {
+    display: flex;
   }
   
-  .slide-content table {
+  .td3 {
+    display: flex;
+  }
+}
+@media screen and (max-width:426px) {
+  .h2-slides {
+    font-size: 1em;
+  }
+
+  .tablesSlide2 {
+    display: block;
+  }
+
+  .resp {
+    display: flex;
+    justify-content: space-around;
     width: 100%;
-    border-collapse: collapse;
   }
-  
-  .slide-content table td {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: center;
+
+  .resp1 {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
   }
-  
-  .swiper-button-next, .swiper-button-prev {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    padding: 10px 20px;
-    cursor: pointer;
-    z-index: 10;
-    border-radius: 5px;
+
+  .td1 {
+    width: 78%;
   }
-  
-  .swiper-button-next {
-    right: -60px; /* Adjust as needed */
+
+  .td2 {
+    width: 100%;
+    /* background-color: rgb(0, 183, 255); */
   }
-  
-  .swiper-button-prev {
-    right: -130px; /* Adjust as needed */
+
+  .td3 {
+    width: 100%;
+    /* background-color: red; */
   }
-  
-  @media (max-width: 768px) {
-    .slider-container {
-      width: 90%;
-    }
-  
-    .slide-content table td {
-      padding: 5px;
-    }
-  
-    .swiper-button-next, .swiper-button-prev {
-      right: -50px;
-    }
+  .h2-slide1{
+    font-size: 2em;
   }
-  
-  @media (max-width: 480px) {
-    .slider-container {
-      width: 100%;
-      height: auto; /* Adjust height to fit content */
-    }
-  
-    .slide-content {
-      flex-direction: column; /* Stack content vertically */
-      text-align: center; /* Center text and button */
-    }
-  
-    .slide-content table {
-      width: 100%;
-      margin-bottom: 20px; /* Space between table and h2 */
-    }
-  
-    .slide-content table td {
-      padding: 3px;
-    }
-    
-    .swiper-button-next, .swiper-button-prev {
-      right: -40px;
-    }
-  }
-  
+
+}

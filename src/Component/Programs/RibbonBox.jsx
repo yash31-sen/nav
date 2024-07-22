@@ -1,10 +1,11 @@
 import React from 'react';
 import './RibbonBox.css';
 
-const RibbonBox = ({ bck, brdbtm, cont1, cont2, hrColor }) => {
+const RibbonBox = ({ bck, brdbtm, cont1, cont2, hrColor, hoverImage }) => {
   const boxStyle = {
     maxWidth: "500px",
-    borderBottom: `${brdbtm.size}px solid ${brdbtm.color}`
+    borderBottom: `${brdbtm.size}px solid ${brdbtm.color}`,
+    '--hover-image': `url(${hoverImage})`
   };
 
   const ribbonStyle = {
@@ -22,8 +23,7 @@ const RibbonBox = ({ bck, brdbtm, cont1, cont2, hrColor }) => {
     <div className="box" style={boxStyle}>
       <div className="ribbon-2" style={ribbonStyle}>{cont1}</div>
       <div className="content">
-        <p>
-        {cont2}</p>
+        <p>{cont2}</p>
       </div>
       <hr style={hrStyle} />
     </div>

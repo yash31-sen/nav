@@ -1,112 +1,126 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
-
 .footer {
   width: 100%;
-  height: auto;
-  padding: 20px 0;
-  background-image: url('./assets/footerbg.jpg');
+  height: auto; /* Adjust height for dynamic content */
+  /* background-color: #f8f9fa; */
+  display: flex;
+  color: #000000; /* Darker text color for better readability */
+  padding: 2vw;
+  box-sizing: border-box;
+  /* background-image: url('E:/test/test/public/assets/footerbg.jpg'); */
   background-size: cover;
-  background-position: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  color: #fff;
-  font-family: 'Montserrat', sans-serif;
-  text-align: center;
+  flex-wrap: wrap; /* Allow flex items to wrap on smaller screens */
 }
 
-.fleft, .fmiddle, .fright {
-  margin: 10px 0;
-}
-
-.fleft {
-  width: 100%;
-  max-width: 35%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.fleft .flogo img {
-  width: 150px;
-  margin-bottom: 10px;
-}
-
-.fmiddle {
-  width: 100%;
-  max-width: 30%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.fmiddle button {
-  background-color: #4f8b69;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  margin: 5px 0;
-  border-radius: 5px;
-  font-size: 1em;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.fmiddle button:hover {
-  background-color: #3a6b4f;
-}
-
-.fright {
-  width: 100%;
-  max-width: 25%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 10px;
-  border-radius: 10px;
-}
-
-.fright .social-media {
+.footerlogo,
+.footerQR,
+.footerContatct,
+.gmap {
+  width: 25%;
   display: flex;
   justify-content: center;
-  gap: 10px;
-  margin-bottom: 10px;
+  align-items: center;
+  flex-direction: column; /* Stack elements vertically */
+  padding: 1rem; /* Add padding for better spacing */
 }
 
-.fright .social-media a {
-  color: #4f8b69;
-  font-size: 1.5em;
+.footerlogo img,
+.footerQR img,
+.gmap img {
+  max-width: 80%; /* Ensure images fit well */
+  height: auto;
+}
+
+.footerQR h3, .footerQR p,
+.footerContatct h3,
+.footerContatct ul,
+.footerContatct li,
+.footerContatct i,
+.footeradd {
+  margin: 0;
+  padding: 0;
+}
+
+.footerQR img,
+.gmap img {
+  width: 50%; /* Adjust width for better fit */
+  margin-top: 1rem;
+  transition: all 1s ease; /* Add transition effect for hover */
+}
+
+.gmap img:hover {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+  }
+
+  .footerlogo,
+  .footerQR,
+  .footerContatct,
+  .gmap {
+    width: 100%; /* Full width on smaller screens */
+  }
+
+  .footerQR img,
+  .gmap img {
+    width: 70%; /* Adjust width for better fit on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .footerQR img,
+  .gmap img {
+    width: 80%; /* Adjust width for better fit on smaller screens */
+  }
+}
+
+.footerContatct ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerContatct li {
+  margin-bottom: 1rem;
+  /* display: flex;
+  align-items: ce
+  nter; */
+}
+
+.footerContatct i {
+  margin-right: 0.5rem;
+}
+
+.footeradd {
+  margin-left: 0.5rem;
+  display: inline-block;
+  white-space: nowrap; /* Prevent line break */
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem; /* Space between icons and map */
+}
+
+.social-media a {
+  color: #000000; /* Color for the icons */
+  margin: 0 0.5rem;
+  font-size: 1.5rem; /* Size of the icons */
   transition: color 0.3s ease;
 }
 
-.fright .social-media a:hover {
-  color: #3a6b4f;
+.social-media a:hover {
+  color: #007bff; /* Color on hover */
 }
 
-.fright .images img {
-  width: 100%;
-  max-width: 100px;
-  margin: 5px 0;
-  border-radius: 5px;
-}
-
-/* Responsive design for smaller screens */
-@media screen and (max-width: 767px) {
-  .footer {
-    flex-direction: column;
-  }
-
-  .fleft, .fmiddle, .fright {
-    width: 80%;
-  }
-
-  .fmiddle button {
-    width: 100%;
-  }
-
-  .fright .images img {
-    max-width: 80px;
-  }
+.designed-by {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #000; /* Darker text color */
 }
